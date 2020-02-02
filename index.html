@@ -1,24 +1,102 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>CodePen - Canvas Fireworks</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-<link rel="stylesheet" href="./style.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+     <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+     <title>Падающий снег - CSS3 анимация фона | pcvector.net</title>
+     <link rel="stylesheet" href="style.css" />
+     <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+body{
+	background-color:black;
 
+	/* Firefox */
+	background-image:
+		-moz-radial-gradient(circle, #FFFFFF, transparent 20px),
+		-moz-radial-gradient(circle, #FFFFFF, transparent 10px),
+		-moz-radial-gradient(circle, rgba(255,255,255,.9), transparent 20px),
+		-moz-radial-gradient(circle, rgba(255,255,255,.4), transparent 10px);
+
+	/* Webkit */
+	background-image:
+		-webkit-gradient(radial, 50% 50%, 0, 50% 50%, 20, from(white), to(transparent)),
+		-webkit-gradient(radial, 50% 50%, 0, 50% 50%, 10, from(white), to(transparent)),
+		-webkit-gradient(radial, 50% 50%, 0, 50% 50%, 20, from(rgba(255,255,255,.9)), to(transparent)),
+		-webkit-gradient(radial, 50% 50%, 0, 50% 50%, 10, from(rgba(255,255,255,.4)), to(transparent));
+
+	/* Background Attributes */
+	background-size: 550px 550px, 350px 350px, 250px 270px, 220px 200px;
+	background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+
+	/* Animation */
+	animation-name: movement;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+
+	/* Firefox */
+	-moz-animation-name: movement;
+	-moz-animation-duration: 5s;
+	-moz-animation-timing-function: linear;
+	-moz-animation-iteration-count: infinite;
+
+	/* Webkit */
+	-webkit-animation-name: movement;
+	-webkit-animation-duration: 5s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+}
+@keyframes movement
+{
+	from {
+			background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+	}
+	to {
+			background-position: -550px 550px, -320px 410px, -120px 540px, -150px 350px;
+	}
+}
+@-moz-keyframes movement
+{
+	from {
+			background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+	}
+	to {
+			background-position: -550px 550px, -320px 410px, -120px 540px, -150px 350px;
+	}
+}
+@-webkit-keyframes movement
+{
+	from {
+			background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+	}
+	to {
+			background-position: -550px 550px, -320px 410px, -120px 540px, -150px 350px;
+	}
+}
+</style>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<div id="gui"></div>		
-<div id="canvas-container">
-  <div id="mountains2"></div>
-  <div id="mountains1"></div>
-  <div id="skyline"></div>
-</div>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='https://jackrugile.com/lab/fireworks-v2/js/dat.gui.min.js'></script><script  src="./script.js"></script>
 
+
+<!-- Content -->
+<section id="wrapper">
+	<nav id="navigation">
+		<div class="clearfix"></div>
+	</nav>
+	<div id="container">
+		<div id="content" style="color: #FFFFFF; margin-top: 15%; margin-left: 40%; ">
+			<h1>С днем рождения, Марсель Рафаэлевич :)</h1>
+			<img src="ayder.png">
+			<img src="vlad.png">
+			<img src="danil.png">
+		</div>
+	</div>
+</section>
+
+<!-- pcvector.net -->
+<script type="text/javascript" src="http://pcvector.net/templates/pcv/js/pcvector.js"></script>
+<!-- /pcvector.net -->
 </body>
 </html>
